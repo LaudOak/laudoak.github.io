@@ -7,13 +7,13 @@ categories: Android
 ##LayoutInflater
 
  - ####获取LayoutInflater实例
-```
+```Java
     LayoutInflater layoutInflater = LayoutInflater.from(context);
     LayoutInflater layoutInflater = (LayoutInflater) context
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 ```
  - ####使用LayoutInflater实例加载布局
-```
+```Java
     public View inflate(XmlPullParser parser, ViewGroup root, boolean attachToRoot) {
         synchronized (mConstructorArgs) {
             final AttributeSet attrs = Xml.asAttributeSet(parser);
