@@ -6,17 +6,11 @@ categories: Android
 
 ##LayoutInflater
  - ####获取LayoutInflater实例
-
-    ```Java
     LayoutInflater layoutInflater = LayoutInflater.from(context);
+    LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-    LayoutInflater layoutInflater = (LayoutInflater) context
-        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-    ```
  - ####使用LayoutInflater实例加载布局
 
-    layoutInflater.inflate(resourceId, root);
 
     public View inflate(XmlPullParser parser, ViewGroup root, boolean attachToRoot) {
         synchronized (mConstructorArgs) {
@@ -40,9 +34,8 @@ categories: Android
                     }
                     rInflate(parser, root, attrs);
                 } else {
-                    /*
-                    createViewFromTag()方法，节点名和参数传进去。它根据节点名来创建View对象。在createViewFromTag()方法的内部又会去调用createView()方法，然后使用反射的方式创建出View的实例并返回。
-                    */
+                    //createViewFromTag()方法，节点名和参数传进去。它根据节点名来创建View对象。在createViewFromTag()
+                    //方法的内部又会去调用createView()方法，然后使用反射的方式创建出View的实例并返回。
                     View temp = createViewFromTag(name, attrs);
                     ViewGroup.LayoutParams params = null;
                     if (root != null) {
@@ -51,7 +44,6 @@ categories: Android
                             temp.setLayoutParams(params);
                         }
                     }
-
                     /*
                     循环遍历根布局下的子元素,每次递归完成后则将这个View添加到父布局当中
                     */
