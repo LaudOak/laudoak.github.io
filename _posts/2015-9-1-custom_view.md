@@ -5,15 +5,15 @@ categories: Android
 ---
 
 ##LayoutInflater
- - ####获取LayoutInflater实例
- 
-    LayoutInflater layoutInflater = LayoutInflater.from(context);  
 
+ - ####获取LayoutInflater实例
+```
+    LayoutInflater layoutInflater = LayoutInflater.from(context);
     LayoutInflater layoutInflater = (LayoutInflater) context
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
+```
  - ####使用LayoutInflater实例加载布局
-
+```
     public View inflate(XmlPullParser parser, ViewGroup root, boolean attachToRoot) {
         synchronized (mConstructorArgs) {
             final AttributeSet attrs = Xml.asAttributeSet(parser);
@@ -69,7 +69,7 @@ categories: Android
             return result;
         }
     }
-
+```
  - ####layout_width和layout_height
 
  layout_width和layout_height用于设置View**在布局中**的大小，也就是说，首先View必须存在于一个布局中。

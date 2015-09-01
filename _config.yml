@@ -14,7 +14,9 @@ github_username:  LaudOak
 permalink: /:year/:month/:day/:title/
 
 # Build settings
-markdown: kramdown
+#markdown: kramdown
+markdown: rdiscount
+
 
 # highlight
 # 本地用rouge, github上用pygments
