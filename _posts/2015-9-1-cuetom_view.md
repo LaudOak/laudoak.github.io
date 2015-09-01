@@ -6,6 +6,7 @@ categories: Android
 
 ##LayoutInflater
  - ####获取LayoutInflater实例
+ 
     LayoutInflater layoutInflater = LayoutInflater.from(context);
     LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
