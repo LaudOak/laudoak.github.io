@@ -8,6 +8,7 @@ categories: Android
  - ####获取LayoutInflater实例
 
     LayoutInflater layoutInflater = LayoutInflater.from(context);
+    
     LayoutInflater layoutInflater = (LayoutInflater) context
         .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -76,5 +77,5 @@ categories: Android
     }
 
  - ####layout_width和layout_height
- 
+
  layout_width和layout_height用于设置View**在布局中**的大小，也就是说，首先View必须存在于一个布局中。
