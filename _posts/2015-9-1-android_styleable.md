@@ -73,20 +73,23 @@ categories: Android
 
 ```
 
-why using `me:...`:
+why using `me:...`
 cause: namespace 
-```xml
+
+```
 xmlns:me="http://schemas.android.com/apk/res-auto"
 ```
 
-when using `android:...` first we decalare the namesapce as:
-```xml
+when using `android:...` 
+first we decalare the namesapce as:
+
+```
 xmlns:android="http://schemas.android.com/apk/res/android"
 ```
 
 > - in Bubble.java(Custom view) 
 
-```Java
+```
     private void init(AttributeSet attrs)
     {
         if (null!= attrs)
@@ -114,48 +117,59 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 1. reference：参考某一资源ID。
 
 (1)属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr format="reference" name="background" />
 </declare-styleable>
 ```
 （2）属性使用：
-````
+
+```
 <ImageView
     android:layout_width="42dip"
     android:layout_height="42dip"
     android:background="@drawable/图片ID" />
 ```
+
 2. color：颜色值。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr format="color" name="textColor" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <TextView
     android:layout_width="42dip"
     android:layout_height="42dip"
     android:textColor="#00FF00" />
 ```
+
 3. boolean：布尔值
 
 （1）属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr format="boolean" name="focusable" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <Button
     android:layout_width="42dip"
     android:layout_height="42dip"
     android:focusable="true" />
 ```
+
 4. dimension：尺寸值。
 
 （1）属性定义：
@@ -165,76 +179,96 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <attr format="dimension" name="layout_width" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <Button
     android:layout_width="42dip"
     android:layout_height="42dip" />
 ```
+
 5. float：浮点值。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="AlphaAnimation">
     <attr format="float" name="fromAlpha" />
     <attr format="float" name="toAlpha" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <alpha
     android:fromAlpha="1.0"
     android:toAlpha="0.7" />
 ```
+
 6. integer：整型值。
 （1）属性定义：
+
 ```
 <declare-styleable name="AnimatedRotateDrawable">
     <attr format="integer" name="frameDuration" />
     <attr format="integer" name="framesCount" />
 </declare-styleable>
+
 ```
 （2）属性使用：
+
 ```
 <animated-rotate
     android:frameDuration="100"
     android:framesCount="12"
      />
 ```
+
 7. string：字符串。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="MapView">
     <attr format="string" name="apiKey" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <com.google.android.maps.MapView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:apiKey="0jOkQ80oD1JL9C6HAja99uGXCRiS2CGjKO_bc_g" />
 ```
+
 8. fraction：百分数。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="RotateDrawable">
     <attr format="fraction" name="pivotX" />
     <attr format="fraction" name="pivotY" />
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <rotate
     android:pivotX="200%"
     android:pivotY="300%"
     />
 ```
+
 9. enum：枚举值。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr name="orientation">
@@ -243,15 +277,19 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </attr>
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <LinearLayout
     android:orientation="vertical" >
 </LinearLayout>
 ```
+
 10. flag：位或运算。
 
 （1）属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr name="windowSoftInputMode">
@@ -268,7 +306,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </attr>
 </declare-styleable>
 ```
+
 （2）属性使用：
+
 ```
 <activity
     android:windowSoftInputMode="stateUnspecified | stateUnchanged　|　stateHidden" >
@@ -279,12 +319,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 注意：属性定义时可以指定多种类型值：
 
 （1）属性定义：
+
 ```
 <declare-styleable name="名称">
     <attr format="reference|color" name="background" />
 </declare-styleable>
 ```
+
 （2）属性使用
+
 ```
 <ImageView
     android:layout_width="42dip"
