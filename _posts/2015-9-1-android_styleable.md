@@ -62,7 +62,7 @@ categories: Android
 
        <TextView
            android:padding = "5dp"
-           android:text="if you want to use more bubble ViewGroup, just extend ViewGroup and realize it like [`BubbleLinearLayout.java`](https://github.com/lguipeng/BubbleView/blob/master/library/src/main/java/com/github/library/bubbleview/BubbleLinearLayout.java). "
+           android:text="if you want to use more bubble ViewGroup, just extend ViewGroup "
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_marginLeft="10dp"/>
@@ -87,7 +87,7 @@ first we decalare the namesapce as:
 xmlns:android="http://schemas.android.com/apk/res/android"
 ```
 
-> - in Bubble.java(Custom view) 
+ - in Bubble.java(Custom view) 
 
 ```
     private void init(AttributeSet attrs)
