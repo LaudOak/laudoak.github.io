@@ -14,9 +14,9 @@ categories: Android
 
 ####For example
 
-> - Bubble.java(Custom view)
+ - Bubble.java(Custom view)
 
-> - values/attrs.xml:
+ - values/attrs.xml:
 
   ```xml
 <?xml version="1.0" encoding="utf-8"?>
