@@ -15,7 +15,6 @@ categories: Android
 ####For example
 
  - Bubble.java(Custom view)
-
  - values/attrs.xml:
 
   ```xml
@@ -37,7 +36,7 @@ categories: Android
 </resources>
   ```
 
-> - layout files:
+ - layout files:
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -74,13 +73,13 @@ categories: Android
 
 ```
 
-why using "me:...":
+why using `me:...`:
 cause: namespace 
 ```xml
 xmlns:me="http://schemas.android.com/apk/res-auto"
 ```
 
-when using "android:..." first we decalare the namesapce as:
+when using `android:...` first we decalare the namesapce as:
 ```xml
 xmlns:android="http://schemas.android.com/apk/res/android"
 ```
