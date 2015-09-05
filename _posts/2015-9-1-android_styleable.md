@@ -11,7 +11,8 @@ categories: Android
  - Use custom attribute
  - Get attributes in custom view by TypedArray
 
- ####for example
+
+####For example
 
 > - Bubble.java(Custom view)
 
