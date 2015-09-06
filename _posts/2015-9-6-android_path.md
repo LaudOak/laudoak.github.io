@@ -6,6 +6,7 @@ categories: Android
 
 ###Path usage
  - lineTo()
+ 
  ```
 mPath.moveTo(100, 100);
 mPath.lineTo(300, 300);
