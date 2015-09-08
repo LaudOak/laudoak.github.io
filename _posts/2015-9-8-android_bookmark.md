@@ -7,9 +7,6 @@ categories: Android
 
 ---
 
-* content
-{:toc}
-
 ### 1
 - [AndroidDevTools](http://www.androiddevtools.cn/) 
 - [Android官方文档](http://developer.android.com/intl/zh-cn/develop/index.html)
