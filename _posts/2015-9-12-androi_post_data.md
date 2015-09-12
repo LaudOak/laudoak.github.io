@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sending POST data int Android"
+title: "Sending POST data in Android"
 categories: Android
 ---
 
