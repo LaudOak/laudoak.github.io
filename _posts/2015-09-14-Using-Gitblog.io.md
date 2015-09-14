@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Using Gitblog.io
-tagline: Other
-category: null
+category: Other
 tags: []
 published: true
 
