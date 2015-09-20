@@ -4,4 +4,4 @@ title: versionCode & versionName
 categories: Android
 ---
 
- ![](/resources/image/version.png)
+ ![](/resources/image/version.PNG)
