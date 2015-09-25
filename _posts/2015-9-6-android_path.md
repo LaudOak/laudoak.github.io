@@ -57,8 +57,6 @@ canvas.drawPath(mPath, mPaint);
 
  ![](/resources/image/2015-9-1-android_path/arcTo.jpg)
 
- ![](/resources/image/2015-9-1-android_path/arcTo2.jpg)
-
 ###Bubble Path
 
 ```
