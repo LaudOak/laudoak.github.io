@@ -15,10 +15,8 @@ categories: Android
 Error retrieving parent for item: No resource found that matches the given name 'android:TextAppearance.Material.Widget.Button.Inverse'.
 
 *Your compile SDK version must match the support library's major version.
-
 Since you are using version 23 of the support library, you need to compile against version 23 of the Android SDK.
-
-Alternatively you can continue compiling against version 22 of the Android SDK by switching to the latest support library v22.
+Alternatively you can continue compiling against version 22 of the Android SDK by switching to the latest support library v22.*
 
 
 
