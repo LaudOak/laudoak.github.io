@@ -4,7 +4,7 @@ title: Gray color
 categories: Android
 ---
 
-![](/resources/image/graycolor.png)
+![](/resources/image/graycolor.PNG)
 
 ```
  #d3d3d3
