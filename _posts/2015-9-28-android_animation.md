@@ -16,6 +16,7 @@ categories: Android
 #### - alpha 
 
 ```xml
+
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android" >
 <alpha
@@ -23,7 +24,7 @@ android:fromAlpha="0.1"
 android:toAlpha="1.0"
 android:duration="3000"
 /> 
-<!-- 透明度控制动画效果 alpha
+ 透明度控制动画效果 alpha
         浮点型值：
             fromAlpha 属性为动画起始时透明度
             toAlpha   属性为动画结束时透明度
@@ -36,8 +37,9 @@ android:duration="3000"
             duration  属性为动画持续时间
             说明:     
                 时间以毫秒为单位
--->
+
 </set>
+
 ```
 
 #### - scale
@@ -57,7 +59,7 @@ android:duration="3000"
           android:fillAfter="false"
           android:duration="700" />
 </set>
-<!-- 尺寸伸缩动画效果 scale
+ 尺寸伸缩动画效果 scale
        属性：interpolator 指定一个动画的插入器
         在我试验过程中，使用android.res.anim中的资源时候发现
         有三种动画插入器:
@@ -94,7 +96,7 @@ android:duration="3000"
 
         布尔型值:
             fillAfter 属性 当设置为true ，该动画转化在动画结束后被应用
--->
+
 ```
 
 #### - translate 
@@ -109,7 +111,7 @@ android:fromYDelta="30"
 android:toYDelta="300"
 android:duration="2000"
 />
-<!-- translate 位置转移动画效果
+ translate 位置转移动画效果
         整型值:
             fromXDelta 属性为动画起始时 X坐标上的位置    
             toXDelta   属性为动画结束时 X坐标上的位置
@@ -121,7 +123,7 @@ android:duration="2000"
         长整型值：
             duration  属性为动画持续时间
             说明:   时间以毫秒为单位
--->
+
 </set>
 ```
 
@@ -137,7 +139,7 @@ android:duration="2000"
         android:pivotX="50%" 
         android:pivotY="50%"     
         android:duration="3000" />  
-<!-- rotate 旋转动画效果
+ rotate 旋转动画效果
        属性：interpolator 指定一个动画的插入器
              在我试验过程中，使用android.res.anim中的资源时候发现
              有三种动画插入器:
@@ -168,7 +170,7 @@ android:duration="2000"
         长整型值：
             duration  属性为动画持续时间
             说明:       时间以毫秒为单位
--->
+
 </set>
 ```
 
