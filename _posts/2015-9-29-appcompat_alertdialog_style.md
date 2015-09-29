@@ -27,4 +27,4 @@ builder.show();
 </style>
 ```
 
-![](\resources\image\alertstyle.png)
+![](/resources/image/alertstyle.png)
