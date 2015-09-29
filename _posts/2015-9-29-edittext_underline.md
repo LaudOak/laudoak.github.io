@@ -14,9 +14,9 @@ categories: Android
 
 [EditText draw lines wrong](http://stackoverflow.com/questions/11529597/edittext-draw-lines-wrong)
 
-![getLineBounds](/resources/image/getlinebounds.PNG)
+![](/resources/image/getlinebounds.PNG)
 
-![](/resouces/image/edittext.PNG)
+![](/resources/image/edittext.PNG)
 
 ![](/resources/image/edittextlinespace.PNG)
 
