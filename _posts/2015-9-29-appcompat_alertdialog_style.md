@@ -18,7 +18,7 @@ builder.show();
 ```
 
 
-```xml
+```
 <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
     <!-- Used for the buttons -->
     <item name="colorAccent">#FFC107</item>
