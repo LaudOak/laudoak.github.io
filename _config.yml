@@ -15,7 +15,7 @@ permalink: /:year/:month/:day/:title/
 
 # Build settings
 #markdown: kramdown
-markdown: rdiscount
+#markdown: rdiscount#2016.5.12
 
 
 # highlight
