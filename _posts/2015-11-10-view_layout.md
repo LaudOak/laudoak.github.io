@@ -1,6 +1,6 @@
----
+﻿---
 layout: post
-title:Learning View layout & measure
+title:  "Android layout"
 categories: Android
 ---
 
