@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "substr()"
-categories: Server
+title:  "Chrome Shortcut"
+categories: Other
 ---
 
 ```
