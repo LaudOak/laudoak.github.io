@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "Oracle Flashback Technology(EN)"
+title: "Oracle Flashback Technology(EN)"
 categories: Other
 ---
 

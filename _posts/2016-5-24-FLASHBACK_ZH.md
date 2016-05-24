@@ -1,13 +1,14 @@
-﻿---
+﻿
+---
 layout: post
-title:  "Oracle Flashback Technology(ZH)"
+title: "Oracle Flashback Technology(ZH)"
 categories: Other
 ---
 
-#Oracle Flashback Technology(ZH)
+# Oracle Flashback Technology(ZH)
 
-##概览
->Oracle闪回技术是一组可以让你在不依赖时间点为介质复原数据库而能够看到数据库对象过去的状态，或者将数据库对象回溯到先前状态的Oracle数据库特性。
+## 概览
+> Oracle闪回技术是一组可以让你在不依赖时间点为介质复原数据库而能够看到数据库对象过去的状态，或者将数据库对象回溯到先前状态的Oracle数据库特性。
 
 **使用这些特性，你可以做到以下几点：**
 
