@@ -1,5 +1,5 @@
 #LaudOak's Blog :octocat:
-Here, I will make a note of general program,also ramble on verse .
+
 [Click](http://laudoak.github.io/) to visit the blog.
 
 #Declare
