@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL Privilege
+title: "MySQL Privilege"
 categories: Server
 ---
 ###查看用户所拥有大权限
