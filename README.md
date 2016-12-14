@@ -1,11 +1,6 @@
-#LaudOak's Blog :octocat:
+###LaudOak's Blog :octocat: :memo:
 
-[Click](http://laudoak.github.io/) to visit the blog.
+####[LaudOak's Blog](http://laudoak.github.io/) to visit the blog.
 
-#Declare
-This blog is based on Jekyll and thanks for [Gaohaoyang](https://github.com/Gaohaoyang) provide model.
-
-Thanks for:
-* [GitHub Pages](https://pages.github.com)
-* [Jekyll](http://jekyllrb.com)
-* [Gaohaoyang](https://github.com/Gaohaoyang)
+* Blog is based on Jekyll
+* Thanks for [Gaohaoyang](https://github.com/Gaohaoyang) provide theme model.
