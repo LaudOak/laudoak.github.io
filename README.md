@@ -1,1 +1,1 @@
-#### :memo: [LaudOak's Blog](http://laudoak.github.io/)
+### :memo: [LaudOak's Blog](http://laudoak.github.io/)
