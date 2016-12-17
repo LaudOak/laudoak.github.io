@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo summitting
+echo ===summitting===
 
 git add .
 git commit -am ':memo:'
 git push origin master
 
-echo completed
+echo ===completed===
