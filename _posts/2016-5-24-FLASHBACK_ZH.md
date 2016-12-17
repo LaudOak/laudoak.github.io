@@ -1,8 +1,7 @@
-﻿
----
+﻿---
 layout: post
 title: "Oracle Flashback Technology(ZH)"
-categories: Other
+categories: 云雀
 ---
 
 # Oracle Flashback Technology(ZH)
@@ -29,7 +28,7 @@ categories: Other
 
 
 ***
-##闪回数据库
+## 闪回数据库
 
 * 拥有有SYSDBA权限 
 * 必须预先设置闪回恢复区
@@ -86,7 +85,7 @@ FLASHBACK DATABASE TO BEFORE SCN my_scn;
 ```
 
 ***
-##闪回删除
+## 闪回删除
 
 * 在Oracle 10g中一个DROP TABLE命令的默认操作是将表到回收站（或重新命名它） 而不是真正的删除它。`DROP TABLE... PURGE`选项可用于永久删除表。
 ```
@@ -144,7 +143,7 @@ FLASHBACK TABLE flashback_drop_test TO BEFORE DROP RENAME TO flashback_drop_test
 ```
 
 ***
-##闪回版本查询
+## 闪回版本查询
 
 >闪回版本查询允许使用BETWEEN子句在指定时间段内进行跟踪特定版本的行。
 
@@ -221,7 +220,7 @@ WHERE  id = 1;
 * `VERSIONS_OPERATION` - 由事务执行的操作（（I）nsert，（U）PDATE或（D）elete）
 
 ***
-##闪回数据归档（FDA）
+## 闪回数据归档（FDA）
 > * 使用CREATE FLASHBACK ARCHIVE语句创建一个闪回数据归档，它提供了对指定的数据库对象数据更改的自动跟踪和存档事务的能力。一个闪回归档数据由许多表空间和存储来自针对被跟踪的表事务的历史数据组成。
 
 > * 使用RETENTION参数来声明闪回数据归档保留历史数据的时间周期。历史数据可以使用闪回查询AS子句进行查询。已超越保留期限的历史归档数据将被自动清除。

@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Passing enum or object throgh Activity 
-categories: Android
+categories: 云雀
 ---
 
-###Reference
+### Reference
 
 [Passing enum or object through an intent (the best solution)](http://stackoverflow.com/questions/2836256/passing-enum-or-object-through-an-intent-the-best-solution)
 
 [Android: How to put an Enum in a Bundle?](http://stackoverflow.com/questions/3293020/android-how-to-put-an-enum-in-a-bundle)
 
-###Realize
+### Realize
  - a
 
 ```Java

@@ -1,12 +1,12 @@
 ﻿---
 layout: post
 title: "Oracle Flashback Technology(EN)"
-categories: Other
+categories: 云雀
 ---
 
-#Oracle Flashback Technology(EN)
+# Oracle Flashback Technology(EN)
 
-##Overview
+## Overview
 
 >Oracle Flashback Technology is a group of Oracle Database features that let you view past states of database objects or to return database objects to a previous state without using point-in-time media recovery.
 
@@ -29,7 +29,7 @@ categories: Other
 
 
 ***
-##Flashback Database
+## Flashback Database
 
 * have SYSDBA privilege 
 * flash recovery area must have been prepared in advance
@@ -86,7 +86,7 @@ FLASHBACK DATABASE TO BEFORE SCN my_scn;
 ```
 
 ***
-##Flashback Drop
+## Flashback Drop
 
 * In Oracle 10g the default action of a DROP TABLE command is to move the table to the recycle bin(回收站) (or rename it), rather than actually dropping it. The `DROP TABLE ... PURGE` option can be used to permanently(完全) drop a table.
 ```
@@ -138,13 +138,13 @@ SELECT * FROM "BIN$TDGqmJZKR8u+Hrc6PGD8kw==$0";
          1
 ```
 
-*If an object is dropped and recreated multiple times all dropped versions will be kept in the recycle bin, subject to space. Where multiple versions are present it's best to reference the tables via the RECYCLEBIN_NAME. For any references to the ORIGINAL_NAME it is assumed the most recent object is drop version in the referenced question. During the flashback operation the table can be renamed.
+* If an object is dropped and recreated multiple times all dropped versions will be kept in the recycle bin, subject to space. Where multiple versions are present it's best to reference the tables via the RECYCLEBIN_NAME. For any references to the ORIGINAL_NAME it is assumed the most recent object is drop version in the referenced question. During the flashback operation the table can be renamed.
 ```
 FLASHBACK TABLE flashback_drop_test TO BEFORE DROP RENAME TO flashback_drop_test_old;
 ```
 
 ***
-##Flashback Version Query
+## Flashback Version Query
 >Flashback version query allows the versions of a specific row to be tracked during a specified time period using the VERSIONS BETWEEN clause.
 
 ```
@@ -220,7 +220,7 @@ WHERE  id = 1;
 * `VERSIONS_OPERATION` - Operation performed by the transaction ((I)nsert, (U)pdate or (D)elete)
 
 ***
-##Flashback Data Archive (FDA)
+## Flashback Data Archive (FDA)
 > * Use the CREATE FLASHBACK ARCHIVE statement to create a flashback data archive, which provides the ability to automatically track and archive transactional data changes to specified database objects. A flashback data archive consists of multiple tablespaces and stores historic data from all transactions against tracked tables.
 
 > * Flashback data archives retain historical data for the time duration specified using the RETENTION parameter. Historical data can be queried using the Flashback Query AS OF clause. Archived historic data that has aged beyond the specified retention period is automatically purged.
@@ -307,7 +307,6 @@ DDATE
 -----------------
 13022010 12:46:49
 
-SQL> 
 delete
 from tbl_fl_archive;
 1 row deleted.
