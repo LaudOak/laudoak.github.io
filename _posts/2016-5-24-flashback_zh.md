@@ -1,46 +1,44 @@
 ﻿---
 layout: post
-title: "Oracle Flashback Technology(EN)"
+title: Oracle Flashback Technology ZH
 category: 云雀
 ---
 
-# Oracle Flashback Technology(EN)
+# Oracle Flashback Technology(ZH)
 
-## Overview
+## 概览
+> Oracle闪回技术是一组可以让你在不依赖时间点为介质复原数据库而能够看到数据库对象过去的状态，或者将数据库对象回溯到先前状态的Oracle数据库特性。
 
-> Oracle Flashback Technology is a group of Oracle Database features that let you view past states of database objects or to return database objects to a previous state without using point-in-time media recovery.
+**使用这些特性，你可以做到以下几点：**
 
-**With flashback features, you can do the following:**
+* 执行一些返回过去的数据的查询语句
+* 执行并且返回对数据库作变更的详细历史的元数据的查询语句
+* 恢复表或行到之前的某个时间点
+* 自动跟踪并且对事务数据的变化进行存档
+* 在数据库保持联机状态时回滚事务及其相关事务
 
-* Perform queries that return past data
-* Perform queries that return metadata that shows a detailed history of changes to the database
-* Recover tables or rows to a previous point in time
-* Automatically track and archive transactional data changes
-* Roll back a transaction and its dependent transactions while the database remains online
+**闪回技术提供了6种不同的方式 跟踪并通过不同的方法修复逻辑损坏。**
 
-**Flashback Technology gives you 6 different ways to track and fix logical corruption(逻辑错误) through different approach.**
-
-* Oracle Flashback Query feature lets you specify a target time and then run queries against your database, viewing results as they would have appeared at that time.
-* Oracle Flashback Version Query lets you view all the versions of all the rows that ever existed in one or more tables in a specified time interval.
-* Oracle Flashback Transaction Query lets you view changes made by a single transaction, or by all the transactions during a period of time.
-* Oracle Flashback Table returns a table to its state at a previous point in time.
-* Oracle Flashback Drop reverses the effects of a DROP TABLE statement. 
-* Oracle Flashback Database provides a more efficient alternative to database point-in-time recovery.
-
+* Oracle的闪回查询功能，可以让你指定一个目标时间后运行你的查询语句，这样就可以查看数据库在给定的时间的数据内容。
+* Oracle闪回版本查询，可以查看在规定的过去时间间隔里存在于在一个或多个表的所有版本的行。
+* Oracle闪回事务查询，您可以查看在一个单独的事务中所做的更改，或在某一段时间内的所有事务。
+* Oracle闪回表返回过去时间点的某个表状态。
+* Oracle闪回删除是DROP TABLE的逆操作。
+* Oracle闪回数据库提供了一种更有效的方法来替代依赖时间点的数据库恢复。
 
 
-## Flashback Database
+## 闪回数据库
 
-* have SYSDBA privilege 
-* flash recovery area must have been prepared in advance
+* 拥有有SYSDBA权限 
+* 必须预先设置闪回恢复区
 
 ```sql
 show parameter db_recovery_file;
 ```
 
-* The FLASHBACK_ON column of the V$DATABASE view shows the current status of flashback database,Flashback database is not enabled by default
+* 在V $ DATABASE视图的FLASHBACK_ON列显示了闪回数据库的当前状态,闪回数据库默认不启用
 
-```
+```sql
 CONN / AS SYSDBA
 SHUTDOWN IMMEDIATE
 STARTUP MOUNT EXCLUSIVE
@@ -48,7 +46,7 @@ ALTER DATABASE FLASHBACK ON;
 ALTER DATABASE OPEN;
 ```
 
-* If the database is in NOARCHIVELOG it must be switched to ARCHIVELOG mode.
+* 如果数据库处于NOARCHIVELOG模式它必须切换到ARCHIVELOG模式。
 
 ```sql
 CONN / AS SYSDBA
@@ -60,7 +58,7 @@ ALTER DATABASE ARCHIVELOG;
 ALTER DATABASE OPEN;
 ```
 
-* With flashback enabled the database can be switched back to a previous point in time or SCN without the need for a manual incomplete recovery.
+* 用启用闪回数据库以后，数据库可以切换回回过去的一个时间点或SCN，而不需要完全的手动恢复。(SCN是当Oracle数据库更新后，由DBMS自动维护去累积递增的一个数字)。
 
 ```sql
 -- Create a dummy table.
@@ -81,7 +79,7 @@ CONN scott/tiger
 DESC flashback_database_test
 ```
 
-* Some other variations of the flashback database command include.
+* 闪回数据库的一些其他形式命令包括：
 
 ```sql
 FLASHBACK DATABASE TO TIMESTAMP my_date;
@@ -91,15 +89,15 @@ FLASHBACK DATABASE TO BEFORE SCN my_scn;
 ```
 
 
-## Flashback Drop
+## 闪回删除
 
-* In Oracle 10g the default action of a DROP TABLE command is to move the table to the recycle bin(回收站) (or rename it), rather than actually dropping it. The `DROP TABLE ... PURGE` option can be used to permanently(完全) drop a table.
+* 在Oracle 10g中一个DROP TABLE命令的默认操作是将表到回收站（或重新命名它） 而不是真正的删除它。`DROP TABLE... PURGE`选项可用于永久删除表。
 
 ```sql
 DROP TABLE my_table PURGE;
 ```
 
-* The recycle bin is a logical collection of previously dropped objects, with access tied to the DROP privilege. This feature does not use flashback logs or undo, so it is independent of the other flashback technologies. The contents of the recycle bin can be shown using the SHOW RECYCLEBIN command and purged using the PURGE TABLE command. As a result, a previously dropped table can be recovered from the recycle bin.
+* 回收站是之前删除的对象的逻辑集合，与访问绑定在DROP特权上。此功能不使用闪回日志或撤消，因此它独立于其它闪回技术。回收站的内容可以使用SHOW RECYCLEBIN命令来显示和使用PURGE TABLE命令清除。以前删除的表可以从回收站中恢复。
 
 ```sql
 CREATE TABLE flashback_drop_test (
@@ -127,7 +125,7 @@ SELECT * FROM flashback_drop_test;
          1
 ```
 
-* Tables in the recycle bin can be queried like any other table.
+* 在回收站中的表可以像任何其他表一样进行查询。
 
 ```sql
 DROP TABLE flashback_drop_test;
@@ -146,15 +144,16 @@ SELECT * FROM "BIN$TDGqmJZKR8u+Hrc6PGD8kw==$0";
          1
 ```
 
-* If an object is dropped and recreated multiple times all dropped versions will be kept in the recycle bin, subject to space. Where multiple versions are present it's best to reference the tables via the RECYCLEBIN_NAME. For any references to the ORIGINAL_NAME it is assumed the most recent object is drop version in the referenced question. During the flashback operation the table can be renamed.
+* 如果一个对象被多次删除并重新创建,那他的所有被删除的版本将被保留在回收站中，主体保留在空间。如果有多个版本存在，最好通过RECYCLEBIN_NAME引用表。用于向假定最新对象的ORIGINAL_NAME任何引用是删除的版本中所引用的问题。在闪回操作时的表可以重命名。
 
 ```sql
 FLASHBACK TABLE flashback_drop_test TO BEFORE DROP RENAME TO flashback_drop_test_old;
 ```
 
 
-## Flashback Version Query
->Flashback version query allows the versions of a specific row to be tracked during a specified time period using the VERSIONS BETWEEN clause.
+## 闪回版本查询
+
+>闪回版本查询允许使用BETWEEN子句在指定时间段内进行跟踪特定版本的行。
 
 ```sql
 CREATE TABLE flashback_version_query_test (
@@ -221,22 +220,22 @@ WHERE  id = 1;
                                                         725209 29-MAR-04 02.59.16 PM                       ONE
 ```
 
-**The available pseudocolumn meanings are:**
+**可用参数含义为：**
 
-* `VERSIONS_STARTSCN` or `VERSIONS_STARTTIME` - Starting SCN and TIMESTAMP when row took on this value. The value of NULL is returned if the row was created before the lower bound SCN or TIMESTAMP.
-* `VERSIONS_ENDSCN` or `VERSIONS_ENDTIME` - Ending SCN and TIMESTAMP when row last contained this value. The value of NULL is returned if the value of the row is still current at the upper bound SCN or TIMESTAMP.
-* `VERSIONS_XID` - ID of the transaction that created the row in it's current state.
-* `VERSIONS_OPERATION` - Operation performed by the transaction ((I)nsert, (U)pdate or (D)elete)
+* `VERSIONS_STARTSCN` or `VERSIONS_STARTTIME` - 起始SCN和时间戳
+* `VERSIONS_ENDSCN` or `VERSIONS_ENDTIME` - 结束SCN和TIMESTAMP
+* `VERSIONS_XID` - 在当前状态下创建的行的事务ID
+* `VERSIONS_OPERATION` - 由事务执行的操作（（I）nsert，（U）PDATE或（D）elete）
 
 
-## Flashback Data Archive (FDA)
-> * Use the CREATE FLASHBACK ARCHIVE statement to create a flashback data archive, which provides the ability to automatically track and archive transactional data changes to specified database objects. A flashback data archive consists of multiple tablespaces and stores historic data from all transactions against tracked tables.
+## 闪回数据归档（FDA）
+> * 使用CREATE FLASHBACK ARCHIVE语句创建一个闪回数据归档，它提供了对指定的数据库对象数据更改的自动跟踪和存档事务的能力。一个闪回归档数据由许多表空间和存储来自针对被跟踪的表事务的历史数据组成。
 
-> * Flashback data archives retain historical data for the time duration specified using the RETENTION parameter. Historical data can be queried using the Flashback Query AS OF clause. Archived historic data that has aged beyond the specified retention period is automatically purged.
+> * 使用RETENTION参数来声明闪回数据归档保留历史数据的时间周期。历史数据可以使用闪回查询AS子句进行查询。已超越保留期限的历史归档数据将被自动清除。
 
-> * Flashback data archives retain historical data across data definition language (DDL) changes to the database as long as the DDL change does not affect the structure of the table. The one exception to this rule is that flashback data archives do retain historical data when a column is added to the table.
+> * 在DDL不影响表结构的前提下，可以通过数据定义语言更改闪回数据归档保存的历史数据的数据库。一个例外是，当把新列添加到表时闪回数据归档将保留做历史数据。
 
-* Create a new user and grant him the required privileges:
+* 创建一个新用户，并授予他必需的权限：
 
 ```sql
 SQL> 
@@ -254,15 +253,17 @@ SQL>
 ```
 
 
-* Create a new separate tablespace for data archive:
+* 创建一个新的单独的表空间用于数据存档：
 
+```sql
 SQL> 
 create
 tablespace tbs_arch datafile 'c:\flashback_archive.dbf' size 10m;
 Tablespace created.
 SQL>
+```
 
-* Create flashback archive on this tablespace using the create flashback archive commandas follows:
+* 使用如下创建闪回归档命令在这个表空间中创建闪回存档：
 
 ```sql
 SQL> 
@@ -273,9 +274,9 @@ Flashback archive created.
 SQL>
 ```
 
-With the above command, a flashback archive named fl_arch is created which resides in the tablespace tbs_arch and holds information for one year. It means that you can use any flashback query which contains one year of historical information regarding the table that is assigned to this flashback archive.
+使用上面的命令，一个文件名为fl_arch的闪回归档创建完成并驻留在名为的tbs_arch表空间，持有一年信息。这意味着你可以使用任何闪回查询，其中包含关于分配给这个闪回存档表历史资料一年。
 
-* Now, create a table, insert one row and assign it to the flashback archive:
+* 创建一个表，插入一行，并把它分配给了闪回存档：
 
 ```sql
 SQL> 
@@ -307,7 +308,7 @@ Table altered.
 SQL>
 ```
 
-* The historical change on the table tbl_fl_archive will now be written to the flashback archive named fl_archive. To test it, delete all rows from the table and use flashback queryon that table. Remember, it will not look for the undo data; it will look to the flashback archive file for the changes:
+* 对tbl_fl_archive表的更改历史将被记入名为fl_archive的闪回存档；为了测试，删除表中的所有行和使用闪回queryon该表。它不会去找还原数据;它会寻找到改变的闪回存档文件：
 
 ```sql
 SQL> 
@@ -320,6 +321,7 @@ DDATE
 -----------------
 13022010 12:46:49
 
+SQL> 
 delete
 from tbl_fl_archive;
 1 row deleted.
