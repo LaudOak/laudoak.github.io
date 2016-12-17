@@ -4,7 +4,7 @@ title: Send and receive UDP datagram
 categories: 云雀
 ---
 
-## 二、服务器端代码：
+## 服务器端代码：
 
 ```c
 #include <stdio.h>      /* 标准输入输出头文件 */
@@ -79,7 +79,7 @@ int main( int argc, char *argv[] )
 }
 ```
 
-## 二、客户端源代码：
+## 客户端源代码：
 
 ```c
 #include <stdio.h>
