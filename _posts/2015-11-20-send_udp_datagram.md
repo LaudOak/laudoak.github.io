@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Send and receive UDP datagram
-categories: 云雀
+category: 云雀
 ---
 
 ## 服务器端代码：

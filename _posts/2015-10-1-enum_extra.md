@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Passing enum or object throgh Activity 
-categories: 云雀
+category: 云雀
 ---
 
 ### Reference
