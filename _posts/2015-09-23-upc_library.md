@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Information retrieval
-category: Other
-published: true
-
+category: 凯恩
 ---
 [UPC Library](http://211.87.190.16:8080/sms/opac/search/showiphoneSearch.action)
 
