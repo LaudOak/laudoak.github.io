@@ -2,8 +2,9 @@
 
 echo ===summitting===
 
+msg=":memo:"{date}
 git add .
-git commit -am ':memo:'
+git commit -am ${msg}
 git push origin master
 
 echo ===completed===
