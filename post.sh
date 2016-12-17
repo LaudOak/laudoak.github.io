@@ -2,7 +2,7 @@
 
 echo ===summitting===
 
-msg=":memo:"{date}
+msg=":memo:"
 git add .
 git commit -am ${msg}
 git push origin master
