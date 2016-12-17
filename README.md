@@ -1,1 +1,0 @@
-### :memo: [LaudOak's Blog](https://laudoak.github.io/)

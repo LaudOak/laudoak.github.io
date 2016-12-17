@@ -113,7 +113,7 @@ function backToTop() {
     });
     //点击回到顶部
     $("#top").click(function() {
-        $("body,html").animate({
+        $("body").animate({
             scrollTop: "0"
         }, 500);
     });
@@ -137,16 +137,11 @@ function generateContent() {
         $('#myArticle').removeClass('col-sm-9').addClass('col-sm-12');
     } else {
         $('#content .content-text').html('<ul>' + $('#markdown-toc').html() + '</ul>');
-        //数据加载完成后，加固定边栏
+        /*   //数据加载完成后，加固定边栏
         $('#myAffix').attr({
             'data-spy': 'affix',
-            'data-offset': '10'
-        });
-        $('#myAffix').width($('#myAffix').parent().width());
-        var maxHeight = $(window).height()-130;
-        // console.log(maxHeight);
-        $('#content .content-text').css('max-height', maxHeight+'px');
-        // console.log($(window).height());
+            'data-offset': '50'
+        });*/
     }
-    // console.log("myAffix!!!");
+    console.log("myAffix!!!");
 }
