@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 信息检索网站
-category: 凯恩
+category: C
 ---
 [UPC Library](http://211.87.190.16:8080/sms/opac/search/showiphoneSearch.action)
 
