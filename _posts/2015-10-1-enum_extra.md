@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Passing enum or object throgh Activity 
-category: B
+category: Java
 ---
 
 ### Reference

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Send and receive UDP datagram
-category: B
+category: 网络
 ---
 
 ## 服务器端代码：

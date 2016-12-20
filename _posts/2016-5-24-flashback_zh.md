@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Oracle Flashback Technology ZH
-category: B
+category: 数据库
 ---
 
 # Oracle Flashback Technology(ZH)
