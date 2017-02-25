@@ -40,7 +40,7 @@ LOAD DATA [LOW_PRIORITY | CONCURRENT] [LOCAL] INFILE 'file_name'
  没有声明LOCAL时,文件必须位于服务端并且直接被服务端读取;声明LOCAL时文件被客户端读取并发送给服务器端,此时服务器端会创建一份文件拷贝.
 
 
- ### LOAD DATA过程
+### LOAD DATA过程
 
  - 在A主机上解压data.tar.gz得到data.txt导出的TXT文件
 
