@@ -100,6 +100,17 @@ INFILE "/root/data.txt"
 into table `tmp`(`xxx`,`xxx`,`xxx`,`xxx`);
  ```
 
+导入结果
+
+```
+Stage: 2 of 2 'End bulk insert'      0% of stage done
+```
+
+```
+Query OK, 34322008 rows affected, 1920 warnings (8 min 55.00 sec)
+Records: 34322008  Deleted: 0  Skipped: 0  Warnings: 1920
+```
+
  - 在主机B上导入时,表结构已经做了更改,InnoDB换为MyISAM,相对InNoDB导入速度提高了;同时表新增了自增主键,相对同表结构导入速度下降
 
 ### 参考
