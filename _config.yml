@@ -14,14 +14,14 @@ github_username: LaudOak
 permalink: /:year/:month/:day/:title/
 
 # this is the url root of the create page link on the footer page.
-newsourceroot: https://github.com/LaudOak/laudoak.github.io/new/master
+new_post_source_root: https://github.com/LaudOak/laudoak.github.io/new/master
 #########################################
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
 #duoshuo_shortname: lixizhi
 #duoshuo_url: "http://lixizhi.github.io"
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
-#disqus_shortname: lixizhi
-#disqus_url: "http://lixizhi.github.io"
+disqus_shortname: laudoak
+disqus_url: "https://laudoak.github.io"
 #########################################
 
 # Build settings

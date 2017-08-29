@@ -1,13 +1,12 @@
 <script type="text/javascript">
     function OnClickNewPost()
     {
-        var title = prompt("Please enter title of your post");
+        var title = prompt("New Post Title:");
         if (title!=null){
             title = title.replace(" ", "-");
             var currentdate = new Date();
-            var urlNewPage = "{{ site.newsourceroot }}?filename=_posts/" 
+            var urlNewPage = "{{ site.new_post_source_root }}?filename=_posts/" 
                 + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-" + title + ".md";
-                
             var defaultText =  [
                 '---',
                 'layout: post',
@@ -23,7 +22,6 @@
     }
     
     $(function() {
-      // CreateNewPostLinks
       $('.newpost').each(function(){
           $(this).click(OnClickNewPost);
       });
