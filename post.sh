@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo ===summitting===
+echo ===sending===
 
 msg=":memo:post at "$(date)""
 git add .
