@@ -1,33 +1,10 @@
 # Site settings
-title: LaudOak
-email: laudoak@qq.com
+title: 🚌 LaudOak
+email: laudoak@gmail.com
 description: 
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-
-# baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
 github_username: LaudOak
 permalink: /:year/:month/:day/:title/
-
-# this is the url root of the create page link on the footer page.
 new_post_source_root: https://github.com/LaudOak/laudoak.github.io/new/master
-#########################################
-# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
-#duoshuo_shortname: lixizhi
-#duoshuo_url: "http://lixizhi.github.io"
-# disqus.com commenting system. please note that it is exclusive with duoshuo.com
 disqus_shortname: laudoak
 disqus_url: "https://laudoak.github.io"
-#########################################
-
-# Build settings
 markdown: kramdown
-
-# highlight
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
