@@ -10,7 +10,7 @@ category: 数据库
 docker pull hub.c.163.com/library/mysql:latest
 ```
 
-> docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+ > docker pull [OPTIONS] NAME[:TAG|@DIGEST]
 
 ## docker run
 
@@ -18,7 +18,7 @@ docker pull hub.c.163.com/library/mysql:latest
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=laudoak@reeu -d -p 3306:3306 hub.c.163.com/library/mysql:latest
 ```
 
-> docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+ > docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 -e, --env list                              Set environment variables (default [])
 
@@ -36,10 +36,10 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=laudoak@reeu -d -p 3306:3306 hub.
 
  - docker: Error response from daemon: driver failed programming external connectivity on endpoint mysql (a78e08069291ccb928ee126d9cb9c1ea8394cf17080c0243a0d6c26eb29da458): Error starting userland proxy: listen tcp 0.0.0.0:3306: bind: address already in use.
 
-> docker rm [OPTIONS] CONTAINER [CONTAINER...]
+ > docker rm [OPTIONS] CONTAINER [CONTAINER...]
 
 Remove one or more containers
 
-> docker rmi [OPTIONS] IMAGE [IMAGE...]
+ > docker rmi [OPTIONS] IMAGE [IMAGE...]
 
 Remove one or more images
