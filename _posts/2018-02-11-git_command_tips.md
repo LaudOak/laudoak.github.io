@@ -6,15 +6,23 @@ category: 其他
 
 ### rename git branch name local and remote
 
-->rename the local branch to the new name
+1,rename the local branch to the new name
 
-`git branch -m old_name new_name `
+```
+git branch -m old_name new_name
+```
 
-->delete the old branch on remote - where <remote> is eg. origin
-`git push <remote> --delete old_name`
+2,delete the old branch on remote - where <remote> is eg. origin
 
-->push the new branch to remote         
-`git push <remote> new_name`
+```
+git push <remote> --delete old_name
+```
+
+3,push the new branch to remote
+
+```
+git push <remote> new_name
+```
 
 ### checkout  a remote git branch 
 
