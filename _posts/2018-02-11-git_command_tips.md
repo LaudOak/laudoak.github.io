@@ -28,13 +28,16 @@ git push <remote> new_name
 
 https://stackoverflow.com/questions/1783405/how-do-i-check-out-a-remote-git-branch
 
-`git checkout -b test origin/test`
+```
+git checkout -b test origin/test
+```
 
 
 ### push new branch and set upstream
 
-`git push --set-upstream haier feature/operaiton-reconstruct`
-
+```
+git push --set-upstream haier feature/operaiton-reconstruct
+```
 
 ### remove .gitignore
 
