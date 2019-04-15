@@ -16,28 +16,35 @@ category: 其他
 
 ##### 2.几个常用option
 
-```
-Matching Control
--e<patterns> --regexp=<patterns>  Use patterns as one or more patterns; newlines within patterns separate each pattern from the next. If this option is used multiple times or iscombined with the -f (--file) option, search for all patterns given. (-e is specified by POSIX.)
+- Matching Control
+
+__`-e<patterns> --regexp=<patterns>`__  Use patterns as one or more patterns; newlines within patterns separate each pattern from the next. If this option is used multiple times or iscombined with the -f (--file) option, search for all patterns given. (-e is specified by POSIX.)
 -E  Use extended regular expression syntax. Equivalent to the deprecated egrep command.
 
-General Output Control
--c --count  Suppress normal output; instead print a count of matching lines for each input file. With the -v (--invert-match) option, count non-matching lines. (-c is specified by POSIX.)
--m<num>, --max-count=<num>  Stop reading a file after NUM matching lines.If the input is standard input from a regular file, and NUM matching lines are output,grep ensures  that the standard input is positioned to just after the last matching line before exiting, regardless of the presence of trailing context lines.This enables a calling process to resume a search.When grep stops after NUM matching lines,it outputs any trailing context lines.When the -c or --count option is also used,grep does not output a count greater than NUM. When the -v or --invert-match option is also used, grep stops after outputting NUM non-matching lines.
+- General Output Control
 
-Output Line Prefix Control
--n --line-number  Prefix each line of output with the 1-based line number within its input file. (-n is specified by POSIX.)
--o --only-matching  Output ony the matching segment of each line, rather than the full contents of each matched line
+__`-c --count`__  Suppress normal output; instead print a count of matching lines for each input file. With the -v (--invert-match) option, count non-matching lines. (-c is specified by POSIX.)
 
-Context Line Control(Context lines are non-matching lines that are near a matching line. They are output only if one of the following options are used. Regardless of how these options are set, grep never outputs any given line more than once. If the -o (--only-matching) option is specified, these options have no effect and a warning is given upon their use.)
--A<num> --after-context=<num>  Print num lines of trailing context after matching lines.
--B<num> --before-context=<num>  Print num lines of leading context before matching lines.
--C<num> --context=<num>  Print num lines of leading and trailing output context.
+__`-m<num>, --max-count=<num>`__  Stop reading a file after NUM matching lines.If the input is standard input from a regular file, and NUM matching lines are output,grep ensures  that the standard input is positioned to just after the last matching line before exiting, regardless of the presence of trailing context lines.This enables a calling process to resume a search.When grep stops after NUM matching lines,it outputs any trailing context lines.When the -c or --count option is also used,grep does not output a count greater than NUM. When the -v or --invert-match option is also used, grep stops after outputting NUM non-matching lines.
 
-File and Directory Selection
--r --recursive  For each directory operand, read and process all files in that directory, recursively. Follow symbolic links on the command line, but skip symlinks that are encountered recursively. Note that if no file operand is given, grep searches the working directory. This is the same as the ‘--directories=recurse’ option.
+- Output Line Prefix Control
 
-```
+__`-n --line-number`__  Prefix each line of output with the 1-based line number within its input file. (-n is specified by POSIX.)
+
+__`-o --only-matching`__  Output ony the matching segment of each line, rather than the full contents of each matched line
+
+- Context Line Control(Context lines are non-matching lines that are near a matching line. They are output only if one of the following options are used. Regardless of how these options are set, grep never outputs any given line more than once. If the -o (--only-matching) option is specified, these options have no effect and a warning is given upon their use.)
+
+__`-A<num> --after-context=<num>`__  Print num lines of trailing context after matching lines.
+
+__`-B<num> --before-context=<num>`__  Print num lines of leading context before matching lines.
+	
+__`-C<num> --context=<num>`__  Print num lines of leading and trailing output context.
+
+- File and Directory Selection
+
+__`-r --recursive`__  For each directory operand, read and process all files in that directory, recursively. Follow symbolic links on the command line, but skip symlinks that are encountered recursively. Note that if no file operand is given, grep searches the working directory. This is the same as the ‘--directories=recurse’ option.
+
 
 ## awk
 
