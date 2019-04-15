@@ -6,6 +6,7 @@ category: 其他
 
 ## grep
 
+
 ##### 1.reference:
 
 [GNU Grep 3.3](https://www.gnu.org/software/grep/manual/grep.html)
@@ -13,6 +14,7 @@ category: 其他
 [grep, egrep, fgrep, rgrep - print lines matching a pattern](http://linuxcommand.org/lc3_man_pages/grep1.html)
 
 [grep(1) - Linux man page](https://linux.die.net/man/1/grep)
+
 
 ##### 2.几个常用option
 
@@ -38,7 +40,7 @@ __`-o --only-matching`__  Output ony the matching segment of each line, rather t
 __`-A<num> --after-context=<num>`__  Print num lines of trailing context after matching lines.
 
 __`-B<num> --before-context=<num>`__  Print num lines of leading context before matching lines.
-	
+
 __`-C<num> --context=<num>`__  Print num lines of leading and trailing output context.
 
 - File and Directory Selection
@@ -47,6 +49,7 @@ __`-r --recursive`__  For each directory operand, read and process all files in 
 
 
 ## awk
+
 
 ## examples
 
