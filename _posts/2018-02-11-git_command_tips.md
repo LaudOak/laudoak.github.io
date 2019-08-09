@@ -147,6 +147,37 @@ git log --all -- file
 ![20180918160945.png](https://i.loli.net/2018/09/18/5ba0b2e6e6695.png)
 
 
-### 9️⃣
+### 9️⃣ replace git branch code with another branch’s code
+
+[How to completely replace git branch code with another branch’s code](https://www.nickang.com/replace-git-branch-code/)
+
+```
+# Rename master to old-master, staging to master
+$ (staging) git checkout master
+$ (master) git branch -m old-master
+$ (old-master) git checkout staging
+$ (staging) git branch -m master
+
+# Force push staging (now master) into remote master
+$ (master) git push origin master -f
+
+# Change branch names back to original
+$ (master) git branch -m staging
+$ (staging) git checkout old-master
+$ (old-master) git branch -m master
+
+# Sync local master with remote master
+$ (master) git fetch --all
+$ (master) git reset --hard origin/master
+```
+
+Some explanation and notes:
+
+- git branch -m <new-name> renames the current branch to ‘new-name’
+- git fetch --all downloads all objects and refs from the entire repository without merging
+- git reset --hard origin/master forces your local master’s latest commit to be aligned with remote’s
+- git branch names are just pointers, so renaming staging to master and doing a git push origin master will update remote’s master
+- force pushing a branch to a remote will force the remote branch to take on the branch’s code and git commit history
+
 ### 🔟
 
