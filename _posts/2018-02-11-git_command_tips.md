@@ -179,5 +179,25 @@ Some explanation and notes:
 - git branch names are just pointers, so renaming staging to master and doing a git push origin master will update remote’s master
 - force pushing a branch to a remote will force the remote branch to take on the branch’s code and git commit history
 
-### 🔟
+### 🔟 How do I delete a Git branch locally and remotely?
+
+Executive Summary
+
+```
+$ git push --delete <remote_name> <branch_name>
+$ git branch -d <branch_name>
+```
+
+Note that in most cases the remote name is origin.
+
+Delete Local Branch
+
+To delete the local branch use one of the following:
+
+```
+$ git branch -d branch_name
+$ git branch -D branch_name
+```
+
+Note: The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch. You could also use -D, which is an alias for --delete --force, which deletes the branch "irrespective of its merged status." [Source: man git-branch]
 
